@@ -12,13 +12,13 @@ public class Driver1 {
         Scanner scanner = new Scanner(System.in);
 
         // Read the command
-        String command = scanner.nextLine().trim();
+        String command = scanner.nextLine();
         if (!command.equals("create-account")) {
             System.out.println("Invalid command");
         }
 
-        String owner = scanner.nextLine().trim();
-        String accountName = scanner.nextLine().trim();
+        String owner = scanner.nextLine();
+        String accountName = scanner.nextLine();
         Account account = new Account(owner, accountName);
 
         System.out.println(account.toString());
