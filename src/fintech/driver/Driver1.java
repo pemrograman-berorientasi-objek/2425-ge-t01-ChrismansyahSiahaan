@@ -8,21 +8,17 @@ import java.util.Scanner;
  */
 
  public class Driver1 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        String command = scanner.nextLine().trim();
-        
-        if (command.equals("create-account")) {
-            String owner = scanner.nextLine().trim();
-            String accountName = scanner.nextLine().trim();
-            
-            Account account = new Account(owner, accountName);
-            
-            System.out.println(account.getAccountName() + "|" + account.getOwner() + "|" + account.getBalance());
-        }
-        
-        scanner.close();
-    }
-}
+     public static void main(String[] args) {
+         Scanner scan = new Scanner(System.in);
 
+         String owner = scan.nextLine();
+ 
+         String accountName = scan.nextLine();
+ 
+         Account account = new Account(owner, accountName);
+ 
+         System.out.println(account.toString());
+ 
+         scan.close();
+     }
+ }
